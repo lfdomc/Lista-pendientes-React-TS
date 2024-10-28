@@ -4,7 +4,7 @@ import { ListaTareas } from "./ListaTareas";
 export const TodoApp = () => {
 
     const [nuevaTarea, setNuevaTarea] = useState<string>("");
-    
+
     const [listaTareas, setlistaTareas] = useState<string[]>([]);
 
 
@@ -22,7 +22,7 @@ export const TodoApp = () => {
 
   return (
     <div>
-        <h1> Lista de Tarear</h1>
+        <h1> Lista de Tareas</h1>
         <div> 
                 <input 
                 type="text" 
