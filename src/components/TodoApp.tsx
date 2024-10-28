@@ -29,8 +29,9 @@ export const TodoApp = () => {
                 value = {nuevaTarea}
                 onChange={(e)=> setNuevaTarea(e.target.value)}
                 placeholder=" Nueva Tarea"
+                
                 />
-                <button onClick={handleAddTask}> Agregar Tarea</button>
+                <button onClick={handleAddTask} > Agregar Tarea</button>
 
         </div>
         

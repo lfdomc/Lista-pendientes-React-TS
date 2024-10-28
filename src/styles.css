@@ -86,8 +86,10 @@ body {
 
 .container {
   max-width: 400px;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
+  box-sizing: border-box; /* Asegúrate de que el contenedor respete sus bordes y padding */
 }
 
 h1 {
@@ -100,17 +102,15 @@ input[type="text"] {
   padding: 10px;
   font-size: 16px;
   margin-bottom: 10px;
+  box-sizing: border-box; /* Asegúrate de que el padding no afecte el ancho */
 }
-
 .flex {
-min-width: 800px;
+  width: 100%; /* Ajuste automático al ancho del contenedor */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Asegura que los elementos se apilen en pantallas pequeñas */
   flex-wrap: nowrap;
-  /* align-content: center; */
   justify-content: center;
   align-items: center;
-
 }
 
 .task {
@@ -137,7 +137,7 @@ min-width: 800px;
 }
 
 .taskList {
-  min-width: 25vw;
+  max-width: 100%; /* Asegura que no se desborde */
   margin: 30px;
 }
 
@@ -155,4 +155,45 @@ input[type="text"] {
   padding: 10px;
   font-size: 16px;
   margin-bottom: 10px;
+  box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+}
+
+@media (max-width: 760px) {
+  .flex {
+    flex-direction: column; /* Cambia la dirección en pantallas pequeñas */
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Mantén el input dentro de los límites */
+  }
+}
+
+@media (max-width: 390px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    margin-bottom: 8px;
+    box-sizing: border-box; /* Mantén el input dentro de los límites */
+  }
 }
