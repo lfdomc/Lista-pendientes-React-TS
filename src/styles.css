@@ -178,6 +178,12 @@ input[type="text"] {
   }
 }
 
+.btn-agregar{
+  display: block; /* Esto asegura que el botón ocupe toda la línea */
+  margin: 20px auto; /* Centra el botón horizontalmente */
+
+}
+
 @media (max-width: 390px) {
   .flex {
     flex-direction: column;

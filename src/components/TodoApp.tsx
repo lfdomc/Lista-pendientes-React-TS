@@ -31,7 +31,7 @@ export const TodoApp = () => {
                 placeholder=" Nueva Tarea"
                 
                 />
-                <button onClick={handleAddTask} > Agregar Tarea</button>
+                <button  onClick={handleAddTask} className="btn-agregar"> Agregar Tarea</button>
 
         </div>
         
